@@ -1,3 +1,4 @@
+# create object for matrix caching
 makeCacheMatrix <- function(x = matrix()) {
         s <- NULL
         set <- function(y) {
@@ -12,6 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 getsolve = getsolve)
 }
 
+# getting solve of matrix from cache
 cacheSolve <- function(x, ...) {
         s <- x$getsolve()
         if(!is.null(s)) {
